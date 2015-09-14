@@ -29,27 +29,7 @@ public class Exercise_2 {
 		System.out.println(randomInt2);
 		System.out.println(randomInt + randomInt2);
 		
-		x = scan1.nextInt(); // assign latest input to x
-		System.out.println("Please enter that value of Pi to 4 decimal places (3.1415)");
-		pi = scan1.nextFloat(); // assigns pi to a flat value entered by user
-		if (x == randomInt + randomInt2 && pi == 3.1415){
-			wh = 1;
-			System.out.println("Thank you. Your identity has been identified.");
-			
-			}
-		else{
-			wh = 0;
-			System.out.println("ERROR: YOUR IDENTITY COULD NOT BE DETERMINED. Please Try Again.");
-			try{Thread.sleep(1200);}
-			catch(Exception e){};
-		}
-		if (wh ==1){
-			System.out.println("Welcome. Please follow the instructions on the next screen.");
-			try{Thread.sleep(2000);}
-			catch(Exception e){};
-
-			//public jPane();
-		}
+		
 		
 		}
 		
