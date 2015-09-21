@@ -108,7 +108,7 @@ public class Exercise_2 {
 			do{
 				
 				String passwoord;
-				passwoord = JOptionPane.showInputDialog(null, "How many numbers would you like at the end of yoru password? /n Please enter a number between 4 and 9");
+				passwoord = JOptionPane.showInputDialog(null, "How many numbers would you like at the end of your password? \n Please enter a number between 4 and 9");
 				
 				int i = Integer.parseInt(passwoord);
 				
