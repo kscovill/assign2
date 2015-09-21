@@ -13,25 +13,54 @@ public class FlowLayoutFrame extends JFrame
 	private final JButton NoJButton; // button to say no
 	private final FlowLayout layout; // layout object
 	private final Container container; // container to set layout
+	private final JTextArea textArea;
+	private JButton DoneButton;
+
 	
 	public FlowLayoutFrame()
 	{
-		super ("Question");
-		
+		super ("Question"); // sets the title
+		textArea = new JTextArea(10,15); //sets location of the text box
+		textArea.setSize(200,50);
+		textArea.setText("  Do you like your password?");
+		textArea.setEnabled(true);
 		layout = new FlowLayout();
 		container = getContentPane();
 		setLayout(layout);
+		add(textArea);
 		
 		// set up Yes Button and register listener
 		YesJButton = new JButton("Yes");
 		add(YesJButton);
 		YesJButton.addActionListener(
-				new ActionListener()
+				new ActionListener() //adds a listener for when the button is pressed
 				{
 					@Override
 					public void actionPerformed(ActionEvent event)
 					{
-						YesNo = true;
+						YesJButton.setVisible(false);
+						NoJButton.setVisible(false);
+						textArea.setText("Thank you for using this program.");
+						DoneButton = new JButton("Done"); //sets up a done button to close the program at the end
+						add(DoneButton);
+						DoneButton.addActionListener(
+								new ActionListener()
+								{
+									@Override
+									public void actionPerformed(ActionEvent event)
+									{
+										try{Thread.sleep(1000);} 
+										catch(Exception e){};
+										
+										System.exit(0);
+									}
+								}
+							);
+						
+						layout.layoutContainer(container);
+						
+
+						
 						
 					}
 				}
@@ -46,7 +75,27 @@ public class FlowLayoutFrame extends JFrame
 				@Override
 				public void actionPerformed(ActionEvent event)
 				{
-					YesNo = false;
+					YesJButton.setVisible(false);
+					NoJButton.setVisible(false);
+					textArea.setText(" Sorry about that, you can rerun \n      the program to try again.");
+					DoneButton = new JButton("Done");
+					add(DoneButton);
+					DoneButton.addActionListener(
+							new ActionListener()
+							{
+								@Override
+								public void actionPerformed(ActionEvent event)
+								{
+									try{Thread.sleep(1000);} 
+									catch(Exception e){};
+									
+									System.exit(0);
+								}
+							}
+						);
+					layout.layoutContainer(container);
+					
+				
 				}
 			}
 		);
