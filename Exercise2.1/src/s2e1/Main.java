@@ -19,7 +19,8 @@ private static String[][] myArray = {
         {"Helena", "Helena", "Hamilton", "Battle Ground"},
         {"Montana", "Montana", "Montana", "Washington"},
         {"1601 N Benton ave", "Unknown", "538 Golf Course rd", "Unknown"},
-        {"Custodion", "Intern", "Team Leader", "Patroleum Engineer"} };
+        {"Custodion", "Intern", "Team Leader", "Patroleum Engineer"} 
+        };
 private static int[] zipcode = {59625, 59625, 59840, 98604};
 
 	//display my Jframe
