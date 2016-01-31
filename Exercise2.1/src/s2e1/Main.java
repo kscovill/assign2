@@ -1,3 +1,13 @@
+/*
+ * Company Database through Arrays
+ * 
+ * The information is stored in a private 2 dimensional array of Strings and a single dimension array 
+ * and can only be accessed through a get method by the JFrame.  Then the Jframe grabs the information
+ * and displays them in a neat manner with easy to use buttons to gather or change information. Error
+ * checking is present as well as get methods. I have an e-git history.
+ * 
+ */
+
 package s2e1;
 
 public class Main {
