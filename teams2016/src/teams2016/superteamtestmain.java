@@ -1,6 +1,17 @@
 package teams2016;
 
+//I added sound with exception handling, as well as separate instances of the super class
+// and I made the super class instances unique as well as added some calls to change the win losses to 
+// random numbers
+//
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Random;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 // Main Structure from Dave's Example
 
@@ -39,7 +50,32 @@ public class superteamtestmain {
 		    System.out.println(c + "  \n" + w + "  " + l+"\n");
 		}		
 
-
+		try {
+			try{
+				Sound("applause");
+			} catch (FileNotFoundException e){
+				
+			}
+			} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			Thread.sleep(6000);
+    	} catch (InterruptedException e) {
+    		e.printStackTrace();
+    	}
 	}
 
+	private static void Sound(String name) throws Exception{ // FRom stack Over Flow
+		//This will allow you to play any sound file found in the images folder
+		// From stackoverflow and previous project
+		
+		File url = new File("images/" + name + ".wav");
+	    Clip clip = AudioSystem.getClip();
+	    // getAudioInputStream() also accepts a File or InputStream
+	    AudioInputStream ais = AudioSystem.getAudioInputStream( url );
+		clip.open(ais);
+        clip.loop(0);   
+	}
 }

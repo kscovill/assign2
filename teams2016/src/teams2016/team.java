@@ -1,5 +1,6 @@
 package teams2016;
 
+
 // Main structure from Dave's Example
 
 public class team extends superteam{
@@ -32,4 +33,5 @@ public class team extends superteam{
 	public String getcoach(){
 		return (coach);
 	}
+	
 }

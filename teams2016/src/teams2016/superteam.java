@@ -2,7 +2,7 @@ package teams2016;
 
 // Main structure from Dave's Example
 
-
+// I added some get methods to this class and some more arrays
 public class superteam {
 	private static final String Names[] = {"Girls Soccer", "Football", "Track"};
 	private static final String CoachNames[] = {"Neil Massey", "Steve Weston", "Mr. Stromberg"};
@@ -16,7 +16,7 @@ public class superteam {
 		teamname = "unknown";
 		coach = "unknown";
 		wins = 0;
-		losses = 0;
+		losses = 0; 
 	}
 	
 	
