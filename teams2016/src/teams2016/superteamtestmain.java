@@ -36,7 +36,7 @@ public class superteamtestmain {
 		    int l = mytestteam[i].getlosses();
 		
 		    System.out.println(s + " " + n);
-		    System.out.println(c + "  \n" + w + "  " + l);
+		    System.out.println(c + "  \n" + w + "  " + l+"\n");
 		}		
 
 
